@@ -20,6 +20,7 @@ Meteor.startup(function(){
 
 
 payload = "(function(){"
++" window.history.replaceState( {} , '', '"+rootUrl+"' );"
 +"  var __meteor_fusion__ = {"
 +"    js: " + JSON.stringify(jsFiles)
 +"    , css: " + JSON.stringify(cssFiles)
