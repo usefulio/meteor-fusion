@@ -3,6 +3,6 @@
   "description": "Fuse Your Meteor App with an Existing Page",
   "homepage": "https://github.com/usefulio/meteor-fusion",
   "author": "Ian Serlin (https://github.com/usefulio)",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "git": "https://github.com/usefulio/meteor-fusion.git"
 }
