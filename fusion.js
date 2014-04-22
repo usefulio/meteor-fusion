@@ -1,10 +1,10 @@
 var connectHandlers = WebApp.connectHandlers;
-var clientManifest = WebApp.clientProgram.manifest;
-var jsFiles = [];
-var cssFiles = [];
 
 getPayload = function(hostName) {
+	var jsFiles = [];
+	var cssFiles = [];
 	var rootUrl = Meteor.absoluteUrl("", { rootUrl: hostName });
+	var clientManifest = WebApp.clientProgram.manifest;
 
 	if(rootUrl[rootUrl.length - 1] == "/") {
 		rootUrl = rootUrl.substr(0, rootUrl.length - 1);
