@@ -31,7 +31,6 @@ getPayload = function(hostName) {
 	+"    script.src = src;"
 	+"    script.onload = loadCb;"
 	+"    script.onerror = errorCb;"
-	+"    script.async = false;"
 	+""
 	+"    var head = document.getElementsByTagName('head')[0];"
 	+"    head.appendChild(script);"
