@@ -10,6 +10,9 @@ getPayload = function(hostName) {
 		rootUrl = rootUrl.substr(0, rootUrl.length - 1);
 	}
 
+	var runTimeConfig = JSON.parse(JSON.stringify(__meteor_runtime_config__));
+	runTimeConfig.ROOT_URL = rootUrl + "/";
+
 	_.each(clientManifest, function(fileSpec) {
 		if(fileSpec.type === 'js' && fileSpec.where === 'client') {
 			jsFiles.push(rootUrl+fileSpec.url);
@@ -49,7 +52,7 @@ getPayload = function(hostName) {
 	+"    addLink(__meteor_fusion__.css[i]);"
 	+"  }"
 	+""
-	+"  __meteor_runtime_config__ = " + JSON.stringify(__meteor_runtime_config__) + ";"
+	+"  __meteor_runtime_config__ = " + JSON.stringify(runTimeConfig) + ";"
 	+""
 	+"  for(var i = 0; i < __meteor_fusion__.js.length - 1; i++){"
 	+"    addScript(__meteor_fusion__.js[i]);"
