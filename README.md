@@ -20,3 +20,5 @@ Add this to the head of the page you want to inject your meteor application into
 ```
 <script type="text/javascript" src="http://YOUR_METEOR_APP_URL/fusion"></script>
 ```
+
+Fusion will inject links to the appropriate files prefixed with the http request.headers.host name.
